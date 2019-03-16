@@ -1,0 +1,25 @@
+ <br> <br> <div class="container">
+  <h1><b><i> ADD A CAMPUS MIND </i></b></h1>
+  <form [formGroup]="minds" (ngSubmit)="onSubmit()">
+    <label class="form-group">
+      Mind's Name:
+      <input type="text" class="form-control" formControlName="mindName">
+    </label>
+    <br>
+    <label class="form-group">
+      Mind's MID:
+      <input type="text" class="form-control" formControlName="mindMID">
+    </label>
+    <br>
+    <label class="form-group">
+      Select the Track of the Mind <br>
+      <select formControlName="mindTrack">
+        <option *ngFor="let t of tracks" [ngValue]="t">{{ t }}</option>
+      </select>
+    </label>
+    <br>
+    <button mdbBtn type="button" (click)="loadCaps()" gradient="peach" outline="true" mdbWavesEffect>Load Capabilities*</button>
+    <button [disabled]="!minds.valid" mdbBtn type="submit" gradient="aqua" outline="true" mdbWavesEffect>Add a Campus-Mind</button>
+    <!-- <button mdbBtn type="button" gradient="purple" outline="true" mdbWavesEffect (click)="defaultValue()">Clear Form</button> -->
+  </form>
+</div>

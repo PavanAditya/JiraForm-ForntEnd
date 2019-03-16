@@ -1,0 +1,62 @@
+<div class="row" style="margin:10px">
+  <div class="col-3">
+    <div *ngFor="let mind of minds" align=center>
+      <br>
+      <mdb-card class="w-100" style="border:ridge">
+        <mdb-card-body>
+          <mdb-card-title>
+            <h5>{{mind.mindName}}</h5>
+          </mdb-card-title>
+          <mdb-card-text>{{mind.mindName}} with an MID {{mind.mindMID}} is tagged to the track {{mind.mindTrack}}
+          </mdb-card-text>
+          <button mdbBtn rounded="true" routerLink="statuses" (click)="toggle(mind.mindMID)"
+            gradient="peach">Capabilities List</button>
+        </mdb-card-body>
+      </mdb-card>
+      <!-- <router-outlet></router-outlet> -->
+      <!-- <app-capabilities-statuses></app-capabilities-statuses> -->
+    </div>
+  </div>
+  <div class="col-3 rounded mb-20" (dragover)="allowDrop($event)" (drop)="drop($event)" align="center"
+    style="border:double">
+    <br>
+    <h3><b><i>LEARN</i></b></h3>
+    <div *ngIf="a"  style="height:4000px">
+      <br>
+      <!-- this is displayed -->
+      <!-- <app-statuses [mid]=mid></app-statuses> -->
+      <!-- <router-outlet [mid]=mid></router-outlet> -->
+      <div *ngFor="let c of capabs">
+        <div [id]="c" draggable="true" (dragstart)="drag($event)">
+          <br>
+          <div class="col-lg-0 col-md-0">
+            <!--Card-->
+            <mdb-card cascade="true">
+
+              <!--Card image-->
+              <div class="view view-cascade gradient-card-header purple-gradient">
+                <h3 class="card-header-title"> {{c}} </h3>
+              </div>
+              <!--/Card image-->
+            </mdb-card>
+            <!--/.Card-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-3 rounded mb-20" (dragover)="allowDrop($event)" (drop)="drop($event)" align="center"
+    style="border:double">
+    <br>
+    <h3><b><i>MANAGE</i></b></h3>
+    <div id="clearDiv" style="height:4000px"></div>
+    <br>
+  </div>
+  <div class="col-3 rounded mb-20" (dragover)="allowDrop($event)" (drop)="drop($event)" align="center"
+    style="border:double">
+    <br>
+    <h3><b><i>THRIVE</i></b></h3>
+    <div id="clearDiv1"  style="height:4000px"></div>
+    <br>
+  </div>
+</div>

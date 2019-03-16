@@ -1,0 +1,44 @@
+<br> <br>
+<div class="container">
+  <h2><b><i>ADD A NEW TRACK TO JIRA BOARD</i></b></h2> <br>
+  <form [formGroup]="tracks" (ngSubmit)="onSubmit()">
+
+
+    <label class="form-group">
+      <h5>Track Name:</h5>
+      <input type="text" class="form-control" formControlName="trackName">
+      <!-- <div *ngIf="!f.superHero.errors.pristine" class="alert alert-danger">
+          Id is required </div> -->
+    </label><br>
+
+    <!-- <label class="form-group"><h5>Capability KO's List:</h5>
+      <input type="text" class="form-control" formControlName="koS">
+    </label> -->
+
+    <div formArrayName="koS">
+
+      <h5>Capability List with KOs:</h5>
+
+      <div *ngFor="let address of koS.controls; let i=index">
+        <br>
+        <label>
+          Capabilities:
+          <input type="text" class="form-control" [formControlName]="i">
+        </label>
+      </div>
+
+      <button mdbBtn type="button" gradient="peach" outline="true" mdbWavesEffect (click)="addkoS()">Add a KO</button>
+
+    </div><br>
+
+    <!-- <button type="submit" [disabled]="!tracks.valid" class="btn btn-success">Submit</button> -->
+    <button [disabled]="!tracks.valid" mdbBtn type="submit" gradient="aqua" outline="true" mdbWavesEffect>Submit Track
+      Details</button>
+    <!-- <button mdbBtn type="button" gradient="purple" outline="true" mdbWavesEffect (click)="defaultValue()">Clear Form</button> -->
+
+  </form>
+  <!-- <button class="btn btn-secondary" type="submit" (click)="defaultProfile()">Default Hero</button> -->
+  <div>
+    <!-- <h3> {{heros.value|json}}</h3> -->
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div *ngFor="let c of capabs">
+  <br>
+  <div class="col-lg-0 col-md-0" draggable="true" (ondragstart)="drag(event)" id="c">
+    <!--Card-->
+    <mdb-card cascade="true">
+
+      <!--Card image-->
+      <div class="view view-cascade gradient-card-header blue-gradient">
+        <h3 class="card-header-title"> {{c}} </h3>
+      </div>
+      <!--/Card image-->
+    </mdb-card>
+    <!--/.Card-->
+  </div>
+</div>
