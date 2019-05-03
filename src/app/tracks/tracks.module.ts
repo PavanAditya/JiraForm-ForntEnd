@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { TracksRoutingModule } from './tracks-routing.module';
 import { RegisterComponent } from './register/register.component';
 import { AddComponent } from './add/add.component';
+import { ReactiveFormsModule } from '@angular/forms';
 // import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
