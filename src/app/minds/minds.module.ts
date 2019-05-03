@@ -10,6 +10,6 @@ import { RegisterComponent } from './register/register.component';
     CommonModule,
     MindsRoutingModule
   ],
-  exports: [MindsModule]
+  exports: []
 })
 export class MindsModule { }
