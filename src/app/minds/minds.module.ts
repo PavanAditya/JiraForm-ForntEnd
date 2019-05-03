@@ -8,7 +8,8 @@ import { RegisterComponent } from './register/register.component';
   declarations: [RegisterComponent],
   imports: [
     CommonModule,
-    MindsRoutingModule
+    MindsRoutingModule,
+    ReactiveFormsModule
   ],
   exports: []
 })
