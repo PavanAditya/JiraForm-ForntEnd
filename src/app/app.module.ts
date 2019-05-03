@@ -11,9 +11,7 @@ import { CapabilitiesModule } from './capabilities/capabilities.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    RegisterComponent,
-    AddComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -21,6 +19,7 @@ import { CapabilitiesModule } from './capabilities/capabilities.module';
     ReactiveFormsModule,
     HttpClientModule,
     CapabilitiesModule,
+    TracksModule,
     MDBBootstrapModule.forRoot()
   ],
   providers: [],
