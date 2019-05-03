@@ -8,6 +8,7 @@ import { AddComponent } from './tracks/add/add.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CapabilitiesModule } from './capabilities/capabilities.module';
+import { TracksModule } from './tracks/tracks.module';
 
 @NgModule({
   declarations: [
