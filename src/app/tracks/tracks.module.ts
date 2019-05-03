@@ -10,9 +10,10 @@ import { AddComponent } from './add/add.component';
   declarations: [RegisterComponent, AddComponent],
   imports: [
     CommonModule,
-    TracksRoutingModule
+    TracksRoutingModule,
+    ReactiveFormsModule
   ],
-  exports: [TracksModule]
+  exports: []
 })
 export class TracksModule { }
 
